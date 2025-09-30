@@ -1,30 +1,70 @@
 body {
     font-family: Arial, sans-serif;
-    background: #f0f8ff;
     text-align: center;
-    padding: 50px;
+    background-color: #f0f8ff;
 }
 
 .container {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    display: inline-block;
-    box-shadow: 0px 0px 10px gray;
+    margin-top: 10%;
+    border-top: 10%;
+
 }
 
-input, button {
+form {
+    margin-top: 20px;
+    position: relative;
+}
+
+input {
     padding: 10px;
-    margin: 5px;
+    font-size: 16px;
 }
 
 button {
-    background: #007BFF;
-    color: white;
-    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
     cursor: pointer;
 }
 
-button:hover {
-    background: #0056b3;
+#result {
+    margin-top: 20px;
+    font-size: 18px;
 }
+
+/* Suggestions dropdown */
+.input-container {
+    position: relative;   /* makes #suggestions align under input */
+    display: inline-block;
+    width: 200px;
+}
+
+#city {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Suggestions dropdown */
+
+#suggestions {
+    margin-top:10px;
+    /* border: 1px solid #ccc; */
+    max-height: 150px;
+    overflow-y: auto;
+    background: white;
+    position: absolute;
+    width: 200px;
+    z-index: 1000;
+}
+
+.suggestion-item {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover,
+.active-suggestion {
+    background-color: #f0f0f0;
+}
+
